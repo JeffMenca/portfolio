@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-bat-dark text-bat-orange font-mono overflow-x-hidden;
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+  }
+}
+
+@layer components {
+  /* Contenedores estilo "Tactical Cell" */
+  .tactical-cell {
+    @apply bg-bat-surface border border-bat-border/30 relative overflow-hidden transition-all duration-300;
+  }
+
+  .tactical-cell:hover {
+    @apply border-bat-orange/50 shadow-[0_0_15px_rgba(247,129,102,0.1)];
+  }
+
+  /* Botón de Acceso Wayne Tech */
+  .btn-tactical {
+    @apply px-6 py-2 bg-bat-orange text-bat-dark font-black uppercase text-xs tracking-widest
+           hover:brightness-110 active:scale-95 transition-all shadow-[0_0_10px_rgba(247,129,102,0.3)];
+  }
+
+  /* Capas de Interfaz (Overlays) */
+  .crt-overlay {
+    @apply fixed inset-0 pointer-events-none z-[100];
+    background:
+      linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
+      linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 0.02),
+        rgba(0, 255, 0, 0.01),
+        rgba(0, 0, 255, 0.02)
+      );
+    background-size:
+      100% 4px,
+      3px 100%;
+  }
+
+  .scanline-effect {
+    @apply absolute w-full h-[2px] bg-bat-orange/10 z-[5] pointer-events-none;
+    animation: scanline-move 8s linear infinite;
+  }
+}
+
+/* Animaciones Custom */
+@keyframes scanline-move {
+  0% {
+    top: -5%;
+  }
+  100% {
+    top: 105%;
+  }
+}
+
+.tactical-grid {
+  background-size: 40px 40px;
+  background-image: radial-gradient(circle, #56423d 1px, transparent 1px);
+  opacity: 0.15;
+}

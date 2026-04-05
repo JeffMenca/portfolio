@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply bg-bat-dark text-bat-orange font-mono overflow-x-hidden;
+    background-image: url("https://grainy-gradients.vercel.app/noise.svg");
+    background-repeat: repeat;
+    background-attachment: fixed;
+  }
+
+  /* Remove all border-radius globally for tactical aesthetic */
+  *,
+  *::before,
+  *::after {
+    border-radius: 0 !important;
+  }
+}
+
+@layer components {
+  .tactical-cell {
+    @apply bg-bat-surface border border-bat-border/30 relative overflow-hidden transition-all duration-300;
+  }
+
+  .tactical-cell:hover {
+    @apply border-bat-orange/50 shadow-[0_0_15px_rgba(247,129,102,0.1)];
+  }
+
+  .btn-tactical {
+    @apply px-6 py-2 bg-bat-orange text-bat-dark font-black uppercase text-xs tracking-widest
+           hover:brightness-110 active:scale-95 transition-all shadow-[0_0_10px_rgba(247,129,102,0.3)];
+  }
+
+  .btn-tactical-outline {
+    @apply px-6 py-2 border border-bat-cyan/40 text-bat-cyan font-black uppercase text-xs tracking-widest
+           hover:bg-bat-cyan/10 transition-all;
+  }
+
+  .crt-overlay {
+    @apply fixed inset-0 pointer-events-none z-[100];
+    background:
+      linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%),
+      linear-gradient(
+        90deg,
+        rgba(255, 0, 0, 0.02),
+        rgba(0, 255, 0, 0.01),
+        rgba(0, 0, 255, 0.02)
+      );
+    background-size:
+      100% 4px,
+      3px 100%;
+  }
+
+  .noise-overlay {
+    @apply fixed inset-0 pointer-events-none z-[101];
+    background: url("https://grainy-gradients.vercel.app/noise.svg");
+    opacity: 0.03;
+  }
+
+  .scanline-effect {
+    @apply absolute w-full h-[2px] bg-bat-orange/10 z-[5] pointer-events-none;
+    animation: scanline-move 8s linear infinite;
+  }
+
+  .section-divider {
+    @apply flex items-center gap-4 my-12;
+  }
+
+  .section-divider::before,
+  .section-divider::after {
+    content: "";
+    @apply h-px bg-bat-border/40 flex-1;
+  }
+
+  .cell-header {
+    @apply h-6 bg-bat-card flex items-center px-4 justify-between border-b border-bat-border/20;
+  }
+
+  .cell-header-label {
+    @apply text-[9px] font-mono text-white/40 tracking-widest uppercase;
+  }
+
+  .cell-header-dots {
+    @apply flex gap-1;
+  }
+
+  .cell-header-dot-orange {
+    @apply w-2 h-2 bg-bat-orange/40;
+  }
+
+  .cell-header-dot-cyan {
+    @apply w-2 h-2 bg-bat-cyan/40;
+  }
+}
+
+/* Custom Animations */
+@keyframes scanline-move {
+  0% {
+    top: -5%;
+  }
+  100% {
+    top: 105%;
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes target-lock {
+  0% { transform: scale(1); opacity: 0.5; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); opacity: 0.5; }
+}
+
+.tactical-grid {
+  background-size: 40px 40px;
+  background-image: radial-gradient(circle, #56423d 1px, transparent 1px);
+  opacity: 0.15;
+}
+
+.cursor-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #56423d;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #F78166;
+}
+
+/* Selection color */
+::selection {
+  background-color: #F78166;
+  color: #0a0a0a;
+}
