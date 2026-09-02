@@ -5,18 +5,16 @@ import { useLanguage } from "@/i18n/LanguageContext";
 
 const PROJECT_META = [
   {
-    url: "#",
+    url: "https://www.eppigo.com/",
     tags: ["REACT_NATIVE", "TYPESCRIPT", "REST_API", "MOBILE"],
     code: "EPG_01",
     gradient: "bg-gradient-to-br from-sky-600/40 to-indigo-900/40",
-    badge: "comingSoon" as const,
   },
   {
-    url: "#",
+    url: "https://app.xtratology.com/en/login",
     tags: ["REACT", "NESTJS", "AI_AGENTS", "TYPESCRIPT"],
     code: "JRV_02",
     gradient: "bg-gradient-to-br from-cyan-600/40 to-blue-900/40",
-    badge: "comingSoon" as const,
   },
   {
     url: "https://www.maxicompra.com/",
@@ -43,15 +41,21 @@ const PROJECT_META = [
     gradient: "bg-gradient-to-br from-emerald-600/40 to-teal-900/40",
   },
   {
+    url: "https://hotellomarealresort.com/",
+    tags: ["NEXT.JS", "TAILWIND", "HOSPITALITY", "UI/UX"],
+    code: "HLR_07",
+    gradient: "bg-gradient-to-br from-teal-600/40 to-cyan-900/40",
+  },
+  {
     url: "https://www.hauslabs.com/pages/the-foundation-lab",
     tags: ["REACT", "SHOPIFY", "BEAUTY_TECH", "UI/UX"],
-    code: "HLF_07",
+    code: "HLF_08",
     gradient: "bg-gradient-to-br from-purple-600/40 to-pink-900/40",
   },
   {
     url: "#",
     tags: ["UNITY", "C#", "GAMEPLAY", "OOP"],
-    code: "UGL_08",
+    code: "UGL_09",
     gradient: "bg-gradient-to-br from-lime-600/40 to-green-900/40",
     badge: "inProgress" as const,
   },

@@ -113,6 +113,12 @@ const translations = {
             "Plataforma web para industria hotelera con diseño moderno y sistema de reservaciones.",
         },
         {
+          name: "HOTEL_LOMA_REAL_RESORT",
+          role: "DESARROLLADOR",
+          description:
+            "Sitio web para resort con diseño responsivo, galería de instalaciones y flujo de reservaciones orientado a conversión.",
+        },
+        {
           name: "HAUS_LABS_FOUNDATION",
           role: "CO-DEV",
           description:
@@ -384,6 +390,12 @@ const translations = {
           role: "DEVELOPER",
           description:
             "Hospitality web platform with modern design and reservation system.",
+        },
+        {
+          name: "HOTEL_LOMA_REAL_RESORT",
+          role: "DEVELOPER",
+          description:
+            "Resort website with responsive design, facilities gallery and a conversion-focused reservation flow.",
         },
         {
           name: "HAUS_LABS_FOUNDATION",
