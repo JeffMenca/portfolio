@@ -1,16 +1,17 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Settings, Terminal, Radio, Menu, Globe } from "lucide-react";
+import { Settings, Terminal, Radio, Menu } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import LanguageSwitch from "./LanguageSwitch";
 
 interface HeaderProps {
   onMenuToggle: () => void;
 }
 
 export default function Header({ onMenuToggle }: HeaderProps) {
-  const { t, locale, toggleLocale } = useLanguage();
+  const { t } = useLanguage();
   const [time, setTime] = useState("");
 
   const NAV_ITEMS = [
@@ -48,8 +49,9 @@ export default function Header({ onMenuToggle }: HeaderProps) {
         >
           <Menu size={20} />
         </button>
-        <span className="text-sm md:text-lg font-black tracking-tighter text-bat-orange">
-          WAYNE_TECH // PORTFOLIO_OS
+        <span className="text-sm md:text-lg font-black tracking-tighter text-bat-orange whitespace-nowrap">
+          <span className="sm:hidden">WAYNE_TECH</span>
+          <span className="hidden sm:inline">WAYNE_TECH // PORTFOLIO_OS</span>
         </span>
         <div className="hidden lg:flex gap-4 items-center">
           <span className="w-2 h-2 bg-bat-cyan animate-pulse" />
@@ -72,17 +74,8 @@ export default function Header({ onMenuToggle }: HeaderProps) {
       </nav>
 
       <div className="flex items-center gap-3 text-bat-orange">
-        {/* Language toggle */}
-        <button
-          onClick={toggleLocale}
-          className="flex items-center gap-1.5 px-2 py-1 border border-bat-border/30 hover:border-bat-orange/50 transition-colors group"
-          aria-label="Toggle language"
-        >
-          <Globe size={12} className="group-hover:text-bat-cyan transition-colors" />
-          <span className="font-mono text-[10px] font-bold tracking-wider">
-            {locale === "es" ? "EN" : "ES"}
-          </span>
-        </button>
+        {/* Language switch */}
+        <LanguageSwitch />
 
         <Settings size={14} className="hidden sm:block" />
         <Terminal size={14} className="hidden sm:block" />

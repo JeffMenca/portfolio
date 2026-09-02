@@ -47,11 +47,18 @@ export default function BioPanel() {
 
           {/* Bio content */}
           <div className="flex-1 space-y-4">
-            <h1 className="text-2xl md:text-4xl xl:text-5xl font-mono font-bold text-white tracking-tighter uppercase leading-none">
-              {t.bio.roleTitle}
-              <br />
-              <span className="text-bat-orange">JEFFREY MENÉNDEZ</span>
+            <h1 className="font-mono font-bold tracking-tighter uppercase leading-none">
+              <span className="block text-lg sm:text-xl md:text-2xl xl:text-3xl text-white [overflow-wrap:anywhere]">
+                {t.bio.roleTitle}
+              </span>
+              <span className="block mt-1 text-2xl md:text-4xl xl:text-5xl text-bat-orange">
+                JEFFREY MENÉNDEZ
+              </span>
             </h1>
+
+            <div className="font-mono text-[10px] md:text-[11px] text-bat-cyan/70 tracking-[0.15em] uppercase border-l-2 border-bat-orange/40 pl-3 leading-relaxed">
+              {t.bio.tagline}
+            </div>
 
             <div className="font-mono text-sm text-white/70 leading-relaxed max-w-xl">
               <span className="text-bat-cyan mr-2">&gt;</span>

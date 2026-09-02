@@ -12,12 +12,21 @@ const firaCode = Fira_Code({
 export const metadata: Metadata = {
   title: "WAYNE_TECH // PORTFOLIO_OS — Jeffrey Menéndez",
   description:
-    "Mid Frontend Developer | React, Next.js, TypeScript | +4 years building modern web applications",
+    "Software Developer | Frontend & UI Architecture | Agentic Workflows & SDD | Game Development — React, Next.js, React Native, TypeScript | 4+ years building modern web and mobile applications",
   keywords: [
+    "Software Developer",
     "Frontend Developer",
+    "UI Architecture",
     "React",
     "Next.js",
+    "React Native",
     "TypeScript",
+    "Agentic Workflows",
+    "Spec-Driven Development",
+    "Claude Code",
+    "Unity",
+    "C#",
+    "Game Development",
     "Portfolio",
     "Jeffrey Menéndez",
   ],

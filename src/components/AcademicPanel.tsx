@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { GraduationCap, Award } from "lucide-react";
+import { GraduationCap, Award, Presentation } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 export default function AcademicPanel() {
@@ -59,6 +59,43 @@ export default function AcademicPanel() {
               <span className="w-1.5 h-1.5 bg-bat-orange/50" />
               {t.academic.cert2}
             </div>
+          </div>
+        </div>
+
+        {/* Teaching assistantships */}
+        <div className="border-t border-bat-border/10 pt-4">
+          <div className="flex items-center gap-2 mb-3">
+            <Presentation size={14} className="text-bat-orange" />
+            <span className="font-mono text-xs font-bold text-bat-orange tracking-widest">
+              {t.academic.assistantshipsTitle}
+            </span>
+          </div>
+          <div className="space-y-4 pl-6">
+            {t.academic.assistantships.map((item) => (
+              <div
+                key={item.role}
+                className={`relative pl-4 border-l-2 ${
+                  item.active ? "border-bat-orange/60" : "border-bat-border/30"
+                }`}
+              >
+                <div
+                  className={`absolute left-[-5px] top-1 w-2 h-2 ${
+                    item.active
+                      ? "bg-bat-orange shadow-[0_0_8px_#F78166]"
+                      : "bg-bat-card border border-bat-border/50"
+                  }`}
+                />
+                <div className="font-mono text-xs font-bold text-white/80">
+                  {item.role}
+                </div>
+                <div className="font-mono text-[10px] text-bat-cyan/60 tracking-wider mb-1">
+                  {item.place} // {item.timeline}
+                </div>
+                <p className="font-mono text-[11px] text-white/40 leading-relaxed">
+                  {item.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
 

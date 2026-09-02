@@ -5,11 +5,12 @@ import { useLanguage } from "@/i18n/LanguageContext";
 
 const SKILLS = [
   { name: "REACT / NEXT.JS", level: 95 },
+  { name: "REACT_NATIVE", level: 88 },
   { name: "TYPESCRIPT", level: 92 },
+  { name: "AGENTIC_WORKFLOWS / SDD", level: 90 },
   { name: "TAILWIND_CSS", level: 93 },
-  { name: "JAVASCRIPT_ES6+", level: 95 },
-  { name: "NODE.JS / NESTJS", level: 78 },
-  { name: "VUE.JS", level: 70 },
+  { name: "NODE.JS / NESTJS", level: 80 },
+  { name: "UNITY / C#", level: 72 },
 ];
 
 const GRID_CELLS = [

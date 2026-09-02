@@ -16,6 +16,7 @@ import {
   ChevronsRight,
 } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
+import LanguageSwitch from "./LanguageSwitch";
 
 interface SidebarProps {
   open: boolean;
@@ -107,6 +108,7 @@ export default function Sidebar({
               <div className="h-full bg-bat-orange w-[87.4%] shadow-[0_0_5px_#F78166]" />
             </div>
           </div>
+          <LanguageSwitch showLabel className="justify-between" />
           <a
             href="#comms"
             onClick={onClose}

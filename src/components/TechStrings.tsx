@@ -9,20 +9,53 @@ import {
   GitBranch,
   Palette,
   Bot,
+  Gamepad2,
 } from "lucide-react";
 import { useLanguage } from "@/i18n/LanguageContext";
 
 const TECH_ITEMS = [
-  ["JavaScript (ES6+)", "TypeScript", "PHP", "Python", "Java", "C++"],
-  ["React", "Next.js", "Vue.js", "Redux", "Tailwind CSS", "SASS/SCSS", "HTML5", "CSS3"],
-  ["Node.js", "NestJS", "Laravel"],
+  ["JavaScript (ES6+)", "TypeScript", "C#", "PHP", "Python", "Java", "SQL", "C++"],
+  [
+    "React",
+    "Next.js",
+    "React Native",
+    "Vue.js",
+    "Redux",
+    "Tailwind CSS",
+    "SASS/SCSS",
+    "HTML5",
+    "CSS3",
+    "Design Systems",
+    "Responsive Design",
+    "Web Accessibility",
+    "Web Performance",
+  ],
+  [
+    "Claude Code",
+    "Custom Agents",
+    "Custom Commands",
+    "Planning Flows",
+    "Task Orchestration",
+    "Spec-Driven Development",
+    "LLM Integration",
+  ],
+  ["Node.js", "NestJS", "Laravel", "REST APIs", "GraphQL"],
+  ["Unity", "C#", "Gameplay Scripting", "Mechanics Prototyping", "OOP Patterns"],
   ["MySQL", "PostgreSQL", "MongoDB"],
-  ["Git", "GitHub", "GitLab", "GitHub Actions", "AWS Fundamentals"],
-  ["Figma", "Adobe Photoshop", "Adobe Illustrator"],
-  ["Genetic Algorithms", "Prompt Engineering", "Claude Code", "GitHub Copilot"],
+  ["GitHub Actions", "AWS Fundamentals", "Git", "GitHub", "GitLab"],
+  ["Scrum", "Agile", "Figma", "Adobe Photoshop", "Adobe Illustrator"],
 ];
 
-const ICONS = [Code2, Layout, Server, Database, GitBranch, Palette, Bot];
+const ICONS = [
+  Code2,
+  Layout,
+  Bot,
+  Server,
+  Gamepad2,
+  Database,
+  GitBranch,
+  Palette,
+];
 const COLORS = [
   { text: "text-bat-orange", border: "border-bat-orange/30" },
   { text: "text-bat-cyan", border: "border-bat-cyan/30" },
@@ -31,6 +64,7 @@ const COLORS = [
   { text: "text-bat-orange", border: "border-bat-orange/30" },
   { text: "text-bat-cyan", border: "border-bat-cyan/30" },
   { text: "text-bat-orange", border: "border-bat-orange/30" },
+  { text: "text-bat-cyan", border: "border-bat-cyan/30" },
 ];
 
 export default function TechStrings() {

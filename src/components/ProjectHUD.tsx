@@ -5,41 +5,55 @@ import { useLanguage } from "@/i18n/LanguageContext";
 
 const PROJECT_META = [
   {
+    url: "#",
+    tags: ["REACT_NATIVE", "TYPESCRIPT", "REST_API", "MOBILE"],
+    code: "EPG_01",
+    gradient: "bg-gradient-to-br from-sky-600/40 to-indigo-900/40",
+    badge: "comingSoon" as const,
+  },
+  {
+    url: "#",
+    tags: ["REACT", "NESTJS", "AI_AGENTS", "TYPESCRIPT"],
+    code: "JRV_02",
+    gradient: "bg-gradient-to-br from-cyan-600/40 to-blue-900/40",
+    badge: "comingSoon" as const,
+  },
+  {
     url: "https://www.maxicompra.com/",
     tags: ["REACT", "TYPESCRIPT", "REDUX", "MAGENTO", "PHP"],
-    code: "MXC_01",
+    code: "MXC_03",
     gradient: "bg-gradient-to-br from-orange-600/40 to-red-900/40",
   },
   {
     url: "https://www.skechers.com/shoe-finder/",
     tags: ["REACT", "INTERACTIVE", "UX", "E-COMMERCE"],
-    code: "SKC_02",
+    code: "SKC_04",
     gradient: "bg-gradient-to-br from-blue-600/40 to-indigo-900/40",
   },
   {
     url: "https://www.ugg.com/ugg-style-quiz/",
     tags: ["JAVASCRIPT", "UX_LOGIC", "QUIZ_ENGINE"],
-    code: "UGG_03",
+    code: "UGG_05",
     gradient: "bg-gradient-to-br from-amber-600/40 to-yellow-900/40",
   },
   {
     url: "https://hotelmansiondelviajero.com/",
     tags: ["NEXT.JS", "TAILWIND", "HOSPITALITY"],
-    code: "HMV_04",
+    code: "HMV_06",
     gradient: "bg-gradient-to-br from-emerald-600/40 to-teal-900/40",
   },
   {
     url: "https://www.hauslabs.com/pages/the-foundation-lab",
     tags: ["REACT", "SHOPIFY", "BEAUTY_TECH", "UI/UX"],
-    code: "HLF_05",
+    code: "HLF_07",
     gradient: "bg-gradient-to-br from-purple-600/40 to-pink-900/40",
   },
   {
     url: "#",
-    tags: ["REACT", "NESTJS", "AI_AGENTS", "TYPESCRIPT"],
-    code: "JRV_06",
-    gradient: "bg-gradient-to-br from-cyan-600/40 to-blue-900/40",
-    comingSoon: true,
+    tags: ["UNITY", "C#", "GAMEPLAY", "OOP"],
+    code: "UGL_08",
+    gradient: "bg-gradient-to-br from-lime-600/40 to-green-900/40",
+    badge: "inProgress" as const,
   },
 ];
 
@@ -57,6 +71,7 @@ export default function ProjectHUD() {
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
         {PROJECT_META.map((meta, i) => {
           const item = t.projects.items[i];
+          const badge = "badge" in meta ? meta.badge : undefined;
           return (
             <ProjectCard
               key={meta.code}
@@ -68,8 +83,12 @@ export default function ProjectHUD() {
               code={meta.code}
               gradient={meta.gradient}
               index={i}
-              comingSoon={"comingSoon" in meta && meta.comingSoon === true}
-              comingSoonLabel={t.projects.comingSoon}
+              comingSoon={badge !== undefined}
+              comingSoonLabel={
+                badge === "inProgress"
+                  ? t.projects.inProgress
+                  : t.projects.comingSoon
+              }
             />
           );
         })}

@@ -84,6 +84,10 @@ export default function MissionLog() {
                   )}
                 </div>
 
+                <div className="font-mono text-[11px] text-white/50 mb-1">
+                  {mission.role}
+                </div>
+
                 <div className="font-mono text-[10px] text-bat-cyan/50 mb-2 tracking-wider">
                   {mission.timeline}
                 </div>
