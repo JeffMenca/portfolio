@@ -83,16 +83,22 @@ const translations = {
             "Aplicación móvil para el sector asegurador construida con React Native y TypeScript. Arquitectura de componentes, gestión de estado e integración con APIs REST de extremo a extremo.",
         },
         {
-          name: "JARVIS // SCALINGSOFT",
+          name: "XTRATOLOGY // SCALINGSOFT",
           role: "LEAD_FULLSTACK",
           description:
             "Plataforma de agentes de IA con interfaces dinámicas. Integración de React y NestJS para gestión inteligente de conversaciones y respuestas en tiempo real de modelos de lenguaje.",
         },
         {
-          name: "MAXICOMPRA",
-          role: "CO-DEV_FRONTEND",
+          name: "HOTEL_LOMA_REAL_RESORT",
+          role: "DESARROLLADOR",
           description:
-            "Plataforma e-commerce con funcionalidades críticas. Desarrollo con React, TypeScript y Redux; personalización de Magento con PHP.",
+            "Sitio web para resort con diseño responsivo, galería de instalaciones y flujo de reservaciones orientado a conversión.",
+        },
+        {
+          name: "HOTEL_MANSIÓN",
+          role: "DESARROLLADOR",
+          description:
+            "Plataforma web para industria hotelera con diseño moderno y sistema de reservaciones.",
         },
         {
           name: "SKECHERS_SHOE_FINDER",
@@ -107,18 +113,6 @@ const translations = {
             "Quiz interactivo de estilo para UGG con lógica de experiencia de usuario y flujo de recomendaciones.",
         },
         {
-          name: "HOTEL_MANSIÓN",
-          role: "DESARROLLADOR",
-          description:
-            "Plataforma web para industria hotelera con diseño moderno y sistema de reservaciones.",
-        },
-        {
-          name: "HOTEL_LOMA_REAL_RESORT",
-          role: "DESARROLLADOR",
-          description:
-            "Sitio web para resort con diseño responsivo, galería de instalaciones y flujo de reservaciones orientado a conversión.",
-        },
-        {
           name: "HAUS_LABS_FOUNDATION",
           role: "CO-DEV",
           description:
@@ -129,6 +123,12 @@ const translations = {
           role: "PROYECTO_PERSONAL",
           description:
             "Desarrollo de videojuegos en Unity con C#: scripting de gameplay, prototipado de mecánicas y diseño de sistemas de juego aplicando patrones de diseño y POO.",
+        },
+        {
+          name: "MAXICOMPRA",
+          role: "CO-DEV_FRONTEND",
+          description:
+            "Plataforma e-commerce con funcionalidades críticas. Desarrollo con React, TypeScript y Redux; personalización de Magento con PHP.",
         },
       ],
       comingSoon: "PRÓXIMAMENTE",
@@ -362,16 +362,22 @@ const translations = {
             "Mobile application for the insurance sector built with React Native and TypeScript. Component architecture, state management and end-to-end REST API integration.",
         },
         {
-          name: "JARVIS // SCALINGSOFT",
+          name: "XTRATOLOGY // SCALINGSOFT",
           role: "LEAD_FULLSTACK",
           description:
             "AI agents platform with dynamic interfaces. Integration of React and NestJS for intelligent conversation management and real-time language model responses.",
         },
         {
-          name: "MAXICOMPRA",
-          role: "CO-DEV_FRONTEND",
+          name: "HOTEL_LOMA_REAL_RESORT",
+          role: "DEVELOPER",
           description:
-            "E-commerce platform with critical features. Built with React, TypeScript, and Redux; Magento customization with PHP.",
+            "Resort website with responsive design, facilities gallery and a conversion-focused reservation flow.",
+        },
+        {
+          name: "HOTEL_MANSIÓN",
+          role: "DEVELOPER",
+          description:
+            "Hospitality web platform with modern design and reservation system.",
         },
         {
           name: "SKECHERS_SHOE_FINDER",
@@ -386,18 +392,6 @@ const translations = {
             "Interactive style quiz for UGG with user experience logic and recommendation flows.",
         },
         {
-          name: "HOTEL_MANSIÓN",
-          role: "DEVELOPER",
-          description:
-            "Hospitality web platform with modern design and reservation system.",
-        },
-        {
-          name: "HOTEL_LOMA_REAL_RESORT",
-          role: "DEVELOPER",
-          description:
-            "Resort website with responsive design, facilities gallery and a conversion-focused reservation flow.",
-        },
-        {
           name: "HAUS_LABS_FOUNDATION",
           role: "CO-DEV",
           description:
@@ -408,6 +402,12 @@ const translations = {
           role: "PERSONAL_PROJECT",
           description:
             "Game development in Unity with C#: gameplay scripting, mechanics prototyping and game systems design applying design patterns and OOP.",
+        },
+        {
+          name: "MAXICOMPRA",
+          role: "CO-DEV_FRONTEND",
+          description:
+            "E-commerce platform with critical features. Built with React, TypeScript, and Redux; Magento customization with PHP.",
         },
       ],
       comingSoon: "COMING SOON",

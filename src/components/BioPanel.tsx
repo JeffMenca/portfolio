@@ -68,7 +68,7 @@ export default function BioPanel() {
               {t.bio.initLine2}
               <br />
               <span className="text-bat-cyan mr-2">&gt;</span>
-              <TypingEffect text={t.bio.bioText} speed={15} delay={500} />
+              <TypingEffect key={t.bio.bioText} text={t.bio.bioText} speed={15} delay={500} />
             </div>
 
             <div className="flex flex-wrap gap-3 pt-2">

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Settings, Terminal, Radio, Menu } from "lucide-react";
+import { Terminal, Radio, Menu } from "lucide-react";
 import { useEffect, useState } from "react";
 import { useLanguage } from "@/i18n/LanguageContext";
 import LanguageSwitch from "./LanguageSwitch";
@@ -77,7 +77,6 @@ export default function Header({ onMenuToggle }: HeaderProps) {
         {/* Language switch */}
         <LanguageSwitch />
 
-        <Settings size={14} className="hidden sm:block" />
         <Terminal size={14} className="hidden sm:block" />
         <Radio size={14} className="hidden sm:block" />
         <div className="ml-2 pl-3 border-l border-bat-border/40 font-mono text-[10px] text-white/40">

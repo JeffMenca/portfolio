@@ -12,6 +12,7 @@ interface ProjectCardProps {
   index: number;
   code: string;
   gradient: string;
+  thumbnail?: string;
   comingSoon?: boolean;
   comingSoonLabel?: string;
 }
@@ -25,6 +26,7 @@ export default function ProjectCard({
   index,
   code,
   gradient,
+  thumbnail,
   comingSoon,
   comingSoonLabel,
 }: ProjectCardProps) {
@@ -32,6 +34,13 @@ export default function ProjectCard({
   const linkProps = comingSoon
     ? {}
     : { href: url, target: "_blank" as const, rel: "noopener noreferrer" };
+
+  let overlayClass = "bg-bat-dark/60 group-hover:bg-bat-dark/40";
+  if (comingSoon) {
+    overlayClass = "bg-bat-dark/70";
+  } else if (thumbnail) {
+    overlayClass = "bg-bat-dark/40 group-hover:bg-bat-dark/10";
+  }
 
   return (
     <motion.div
@@ -50,22 +59,27 @@ export default function ProjectCard({
       >
         {/* Preview area */}
         <div className="h-40 relative bg-bat-black overflow-hidden">
-          <div
-            className={`absolute inset-0 ${gradient} opacity-30 ${
-              comingSoon
-                ? "grayscale"
-                : "grayscale group-hover:grayscale-0 group-hover:opacity-50"
-            } transition-all duration-500`}
-          />
+          {thumbnail ? (
+            <img
+              src={thumbnail}
+              alt={name}
+              loading="lazy"
+              className="absolute inset-0 w-full h-full object-cover object-top grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-500"
+            />
+          ) : (
+            <div
+              className={`absolute inset-0 ${gradient} opacity-30 ${
+                comingSoon
+                  ? "grayscale"
+                  : "grayscale group-hover:grayscale-0 group-hover:opacity-50"
+              } transition-all duration-500`}
+            />
+          )}
 
           <div className="absolute inset-0 tactical-grid opacity-30" />
           <div className="scanline-effect opacity-30" />
           <div
-            className={`absolute inset-0 transition-colors duration-300 ${
-              comingSoon
-                ? "bg-bat-dark/70"
-                : "bg-bat-dark/60 group-hover:bg-bat-dark/40"
-            }`}
+            className={`absolute inset-0 transition-colors duration-300 ${overlayClass}`}
           />
 
           {/* Target lock on hover (only for live projects) */}
